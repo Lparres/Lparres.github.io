@@ -10,6 +10,11 @@ body {
 
 p {
   font-size: 1rem;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
 }
 
 h1 {
@@ -24,14 +29,14 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  margin: 0px;
+  padding: 0px;
+  font-size: 2.3rem;
   font-family: "Josefin Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
   color: #00C8FF;
-
-  margin: 10px;
 }
 
 h3 {
@@ -106,6 +111,13 @@ h3 {
 .about {
   grid-area: about;
   aspect-ratio: 2 / 1;
+  
+  padding: 35px;
+  text-align: left;
+  place-content: left;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
 }
 
 .photo {
