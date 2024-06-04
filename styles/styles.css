@@ -1,3 +1,6 @@
+
+/*#region Etiquetas*/
+
 body {
   background-color: #0B0A10;
   color: white;
@@ -6,7 +9,6 @@ body {
   place-content: center;
 
 }
-
 
 p {
   font-size: 1rem;
@@ -50,6 +52,12 @@ h3 {
   margin: 10px;
 }
 
+/*#endregion*/
+
+
+
+/*#region Clases principales*/
+
 .grid-container {
   max-width: 1200px;
   margin: 2rem;
@@ -67,20 +75,6 @@ h3 {
     "idk      idk       idk       idk       game    game    game      game"
     "idk      idk       idk       idk       game    game    game      game"
   ;
-}
-
-@media (max-width: 700px) {
-  .grid-container {
-    grid-template-areas:
-      "box1 box2"
-      "box3 box3"
-      "box3 box3"
-      "box4 box5"
-      "box6 box7"
-      "box6 box8"
-      "box6 box9"
-    ;
-  }
 }
 
 .grid-item {
@@ -107,6 +101,12 @@ h3 {
   background-color: #555;
   outline: 1px solid #fff;
 }
+
+/*#endregion*/
+
+
+
+/*#region Clases Bento Boxes*/
 
 .about {
   grid-area: about;
@@ -193,9 +193,89 @@ h3 {
   aspect-ratio: 2 / 1;
 }
 
+/*#endregion*/
 
 
 
+/*#region Sistema Responsive*/
+
+@media (max-width: 1000px) {
+  .grid-container {
+    grid-template-areas:
+      "name   name    name    photo   photo     es"
+      "name   name    name    photo   photo     en"
+      "about  about   about   about   mail      mail"
+      "about  about   about   about   projects  projects"
+      "art    art     itchio  github  projects  projects"
+      "art    art     skills  skills  skills    skills"
+      "game   game    game    game    game      game"
+      "game   game    game    game    game      game"
+      "game   game    game    game    game      game"
+      "game   game    game    game    game      game"
+      "idk    idk     idk     idk     idk       idk"
+    ;
+  }
+}
+
+@media (max-width: 800px) {
+  .grid-container {
+    grid-template-areas:
+      "name   name    name    photo   photo     es"
+      "name   name    name    photo   photo     en"
+      "about  about   about   about   mail      mail"
+      "about  about   about   about   projects  projects"
+      "art    art     itchio  github  projects  projects"
+      "art    art     skills  skills  skills    skills"
+      "game   game    game    game    game      game"
+      "game   game    game    game    game      game"
+      "game   game    game    game    game      game"
+      "game   game    game    game    game      game"
+      "idk    idk     idk     idk     idk       idk"
+    ;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-areas:
+      "name   name    name    photo   photo     es"
+      "name   name    name    photo   photo     en"
+      "about  about   about   about   mail      mail"
+      "about  about   about   about   projects  projects"
+      "art    art     itchio  github  projects  projects"
+      "art    art     skills  skills  skills    skills"
+      "game   game    game    game    game      game"
+      "game   game    game    game    game      game"
+      "game   game    game    game    game      game"
+      "game   game    game    game    game      game"
+      "idk    idk     idk     idk     idk       idk"
+    ;
+  }
+}
+
+@media (max-width: 450px) {
+  .grid-container {
+    grid-template-areas:
+      "name   name    name    photo   photo     es"
+      "name   name    name    photo   photo     en"
+      "about  about   about   about   mail      mail"
+      "about  about   about   about   projects  projects"
+      "art    art     itchio  github  projects  projects"
+      "art    art     skills  skills  skills    skills"
+      "game   game    game    game    game      game"
+      "game   game    game    game    game      game"
+      "game   game    game    game    game      game"
+      "game   game    game    game    game      game"
+      "idk    idk     idk     idk     idk       idk"
+    ;
+  }
+}
+
+/*#endregion*/
+
+
+
+/*#region Clases fuentes*/
 
 /*Clases para las fuentes del proyecto*/
 
@@ -226,3 +306,5 @@ h3 {
   font-weight: 400;
   font-style: normal;
 }
+
+/*#endregion*/
