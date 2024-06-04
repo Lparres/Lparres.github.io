@@ -1,197 +1,216 @@
+body {
+  background-color: #0B0A10;
+  color: white;
+  font-family: 'josefin-sans';
+  display: grid;
+  place-content: center;
 
-  
-  body{
-    background-color: #0B0A10;
-    color: white;
-    font-family: 'josefin-sans';
-    display: grid;
-    place-content: center;
-      
-  }
+}
 
 
-  p {
-    font-size: 1rem;
-  }
+p {
+  font-size: 1rem;
+}
 
-  h1{
-    font-size: 5.3rem;
-    font-family: "Josefin Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: italic;
-    color: #F7F7F7;
+h1 {
+  font-size: 5.3rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: italic;
+  color: #F7F7F7;
 
-    margin: 10px;
-  }
+  margin: 10px;
+}
 
-  h2{
-    font-size: 2rem;
-    font-family: "Josefin Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    color: #00C8FF;
+h2 {
+  font-size: 2rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  color: #00C8FF;
 
-    margin: 10px;
-  }
+  margin: 10px;
+}
 
-  h3{
-    font-size: 2.4rem;
-    font-family: "Josefin Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    color: #F7F7F7;
+h3 {
+  font-size: 2.4rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  color: #F7F7F7;
 
-    margin: 10px;
-  }
+  margin: 10px;
+}
 
-  .grid-container{
-    max-width: 1200px;
-    margin: 2rem;
-    display: grid;
-    grid-auto-columns: 1fr;
-    grid-gap: 1rem;
-    grid-template-areas: 
+.grid-container {
+  max-width: 1200px;
+  margin: 2rem;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-gap: 1rem;
+  grid-template-areas:
 
-      "about    about     about     about     photo   photo   es        en"
-      "about    about     about     about     photo   photo   projects  projects"
-      "github   github    name      name      name    name    projects  projects"    
-      "art      art       name      name      name    name    itchio    itchio"    
-      "art      art       mail      mail      game    game    game      game"    
-      "skills   skills    skills    skills    game    game    game      game"    
-      "idk      idk       idk       idk       game    game    game      game"    
-      "idk      idk       idk       idk       game    game    game      game"    
+    "about    about     about     about     photo   photo   es        en"
+    "about    about     about     about     photo   photo   projects  projects"
+    "github   github    name      name      name    name    projects  projects"
+    "art      art       name      name      name    name    itchio    itchio"
+    "art      art       mail      mail      game    game    game      game"
+    "skills   skills    skills    skills    game    game    game      game"
+    "idk      idk       idk       idk       game    game    game      game"
+    "idk      idk       idk       idk       game    game    game      game"
+  ;
+}
+
+@media (max-width: 700px) {
+  .grid-container {
+    grid-template-areas:
+      "box1 box2"
+      "box3 box3"
+      "box3 box3"
+      "box4 box5"
+      "box6 box7"
+      "box6 box8"
+      "box6 box9"
     ;
   }
+}
 
-  @media (max-width: 700px){
-    .grid-container{
-      grid-template-areas:
-        "box1 box2"
-        "box3 box3"
-        "box3 box3"
-        "box4 box5"
-        "box6 box7"
-        "box6 box8"
-        "box6 box9"
-      ;
-    }
-  }
+.grid-item {
+  background-color: #1C1E23;
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 0.75rem;
+  text-align: center;
+  place-content: center;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 200ms ease;
+}
 
-  .grid-item{
-    background-color: #1C1E23;
-    margin: 0;
-    padding: 2rem;
-    box-sizing: border-box;
-    border-radius: 0.75rem;
-    text-align: center;
-    place-content: center;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    transition: all 200ms ease;
-  }
+.grid-item img {
+  max-width: 100%;
+  height: auto;
+}
 
 
-  .grid-item:hover{
-    cursor: pointer;
-    background-color: #555;
-    outline: 1px solid #fff;
-  }
+.grid-item:hover {
+  cursor: pointer;
+  background-color: #555;
+  outline: 1px solid #fff;
+}
 
-  .about{
-    grid-area: about;
-    aspect-ratio: 2 / 1;
-  }
+.about {
+  grid-area: about;
+  aspect-ratio: 2 / 1;
+}
 
-  .photo{
-    grid-area: photo;
-  }
+.photo {
+  grid-area: photo;
 
-  .es{
-    grid-area: es;
-    aspect-ratio: 1 / 1;
-  }
+  background-image: url("../src/img/foto_perfil.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
-  .en{
-    grid-area: en;
-    aspect-ratio: 1 / 1;
-  }
+.es {
+  grid-area: es;
+  aspect-ratio: 1 / 1;
+}
 
-  .projects{
-    grid-area: projects;
-  }
+.en {
+  grid-area: en;
+  aspect-ratio: 1 / 1;
+}
 
-  .github{
-    grid-area: github;
-    aspect-ratio: 2 / 1;
-  }
+.projects {
+  grid-area: projects;
+}
 
-  .name{
-    grid-area: name;
-  }
+.github {
+  grid-area: github;
+  aspect-ratio: 2 / 1;
+}
 
-  .art{
-    grid-area: art;
-  }
+.github img {
+  max-width: 35%;
+  height: auto;
+}
 
-  .itchio{
-    grid-area: itchio;
-    aspect-ratio: 2 / 1;
-  }
+.name {
+  grid-area: name;
+}
 
-  .mail{
-    grid-area: mail;
-    aspect-ratio: 2 / 1;
-  }
+.art {
+  grid-area: art;
+}
 
-  .game{
-    grid-area: game;
-    
-  }
+.itchio {
+  grid-area: itchio;
+  aspect-ratio: 2 / 1;
 
-  .skills{
-    grid-area: skills;
-    aspect-ratio: 4 / 1;
-  }
+  background-color: #FA5C5C;
+}
 
-  .idk{
-    grid-area: idk;
-    aspect-ratio: 2 / 1;
-  }
+.itchio img {
+  max-width: 35%;
+  height: auto;
+}
+
+.mail {
+  grid-area: mail;
+  aspect-ratio: 2 / 1;
+}
+
+.game {
+  grid-area: game;
+
+}
+
+.skills {
+  grid-area: skills;
+  aspect-ratio: 4 / 1;
+}
+
+.idk {
+  grid-area: idk;
+  aspect-ratio: 2 / 1;
+}
 
 
 
 
 
-  /*Clases para las fuentes del proyecto*/
+/*Clases para las fuentes del proyecto*/
 
-  .josefin-sans-semibold-italic{
-    font-family: "Josefin Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: italic;
-  }
+.josefin-sans-semibold-italic {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: italic;
+}
 
-  .josefin-sans-semibold{
-    font-family: "Josefin Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-  }
+.josefin-sans-semibold {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
 
-  .josefin-sans-regular{
-    font-family: "Josefin Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: italic;
-  }
+.josefin-sans-regular {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+}
 
-  .nunito-regular {
-    font-family: "Nunito", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-  }
+.nunito-regular {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
