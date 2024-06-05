@@ -3,11 +3,8 @@
 
 body {
   background-color: #0B0A10;
-  color: white;
-  font-family: 'josefin-sans';
   display: grid;
   place-content: center;
-
 }
 
 p {
@@ -16,6 +13,7 @@ p {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  color: #F7F7F7;
   line-height: 1.5;
 }
 
@@ -60,7 +58,7 @@ h3 {
 
 .grid-container {
   max-width: 1200px;
-  margin: 2rem;
+  margin: 1rem;
   display: grid;
   grid-auto-columns: 1fr;
   grid-gap: 1rem;
@@ -157,8 +155,17 @@ h3 {
   grid-area: name;
 }
 
+.name h2{
+  font-size: 1.5rem;
+  margin: 10px;
+}
+
 .art {
   grid-area: art;
+}
+
+.art h3{
+  font-size: 3rem;
 }
 
 .itchio {
@@ -181,11 +188,85 @@ h3 {
 .game {
   grid-area: game;
 
+  padding-top: 50px;
+  text-align: center;
+  place-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+
 }
 
 .skills {
   grid-area: skills;
   aspect-ratio: 4 / 1;
+}
+
+.skills-wrapper {
+  width: 90%;
+  max-width: 1536px;
+  margin-inline: auto;
+  position: relative;
+  height: 80px;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+@keyframes scrollRight {
+  to {
+    right: -200px;
+  }
+}
+
+.skill {
+  width: 80px;
+  height: 80px;
+  background-color: red;
+  border-radius: 6px;
+  position: absolute;
+  right: max(calc(100px * 8), 100%);
+  animation-name: scrollRight;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.skill1 {
+  animation-delay: calc(20s / 8 * (8 - 1) * -1);
+}
+
+.skill2 {
+  animation-delay: calc(20s / 8 * (8 - 2) * -1);
+}
+
+.skill3 {
+  animation-delay: calc(20s / 8 * (8 - 3) * -1);
+}
+
+.skill4 {
+  animation-delay: calc(20s / 8 * (8 - 4) * -1);
+}
+
+.skill5 {
+  animation-delay: calc(20s / 8 * (8 - 5) * -1);
+}
+
+.skill6 {
+  animation-delay: calc(20s / 8 * (8 - 6) * -1);
+}
+
+.skill7 {
+  animation-delay: calc(20s / 8 * (8 - 7) * -1);
+}
+
+.skill8 {
+  animation-delay: calc(20s / 8 * (8 - 8) * -1);
 }
 
 .idk {
