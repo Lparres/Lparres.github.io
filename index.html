@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="./styles/styles.css" type="text/css">
 
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+  <script src="i18n/language.js"></script>
   <!-- <script src="main.js"></script>
   <script src="phaserLib/phaser.js"></script>
   <script src="srcJuego/scripts/Game.js" type="module"></script> -->
@@ -23,15 +25,15 @@
   <div class="grid-container">
 
     <div class="grid-item about">
-      <h2>About me</h2>
-      <p class="nunito-regular">Un apasionado del mundo de los videojuegos, con un firme compromiso por contribuir en la industria. Mi naturaleza curiosa y proactiva me impulsa a superar nuevos retos y demostrar mi talento en cada proyecto que me involucro.</p>
+      <h2 data-i18n="about-title"></h2>
+      <p data-i18n="about-text">Un apasionado del mundo de los videojuegos, con un firme compromiso por contribuir en la industria. Mi naturaleza curiosa y proactiva me impulsa a superar nuevos retos y demostrar mi talento en cada proyecto que me involucro.</p>
       <div class="container-buttons-about">
         <a class="button-about" href="https://www.linkedin.com/in/luisparres/" target="_blank">
-          <p>LinkedIn</p>
+          <p data-i18n="about-button1"></p>
           <img src="./src/img/icons/icon_linkedin_color.svg">
         </a>
         <a class="button-about" href="./src/img/icons/icon_external-link.svg" target="_blank">
-          <p>Mi CV</p>
+          <p data-i18n="about-button2"></p>
           <img src="./src/img/icons/icon_external-link.svg">
         </a>
       </div>
@@ -41,16 +43,16 @@
     </div>
 
     <div class="grid-item es">
-      
+      <a href="index.html" onclick="changeLanguage('es')"></a>
     </div>
 
     <div class="grid-item en">
-
+      <a href="index.html" onclick="changeLanguage('en')"></a>
     </div>
 
     <div class="grid-item projects interactable">
       <a href="#Projects">
-        <h3> Videogame projects </h3>
+        <h3 data-i18n="projects-button"></h3>
       </a>    
     </div>
 
@@ -61,13 +63,13 @@
     </div>
 
     <div class="grid-item name">
-      <h1> Luis Parres </h1>
-      <h2> Game developer & 3D Generalist </h1>
+      <h1 data-i18n="name-title"></h1>
+      <h2 data-i18n="name-subtitle"></h1>
     </div>
 
     <div class="grid-item art interactable">
       <a href="#Art">
-        <h3> 3D Art </h3>
+        <h3 data-i18n="art-button"></h3>
       </a> 
     </div>
 
@@ -78,11 +80,11 @@
     </div>
 
     <div class="grid-item mail">
-      <p class="josefin-sans-semibold-italic" style="font-size: 1.2rem;"> Lparres2000@gmail.com </p>
+      <p data-i18n="mail"></p>
     </div>
 
     <div class="grid-item game">
-      <h2>Wanna play a videogame?</h2>
+      <h2 data-i18n="game-title"></h2>
     </div>
 
     <div class="grid-item skills">
@@ -97,14 +99,14 @@
     </div>
 
     <div class="grid-item idk">
-      <p> 9 </p>
+
     </div>
 
   </div>
 
   <div class="section-title" id="Projects"> 
-    <h4> My games </h4>
-    <h5>These are some of the games I have worked on</h5>
+    <h4 data-i18n="projects-title"></h4>
+    <h5 data-i18n="projects-subtitle"></h5></h5>
   </div>
   <div class="game-projects-grid"> 
     <div class="projects-item"></div>
@@ -114,8 +116,8 @@
   </div>
 
   <div class="section-title"id="Art">
-    <h4> My Art </h4>
-    <h5>These are some of the renders I have worked on</h5>
+    <h4 data-i18n="art-title"></h4> </h4>
+    <h5 data-i18n="art-subtitle"></h5>
   </div>
   <div class="art-grid"> 
     <div class="art-item"></div>
