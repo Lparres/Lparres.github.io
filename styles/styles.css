@@ -223,7 +223,7 @@ h5 {
 }
 
 .button-about:hover img{
-  width: 28px;
+  width: 25px;
   margin-left: 10px;
 }
 
@@ -236,7 +236,10 @@ h5 {
 /*#endregion*/
 
 
-/*#region Projects*/
+/*#region Projects Section*/
+
+
+/*#region Projects Layout*/
 
 .game-projects-grid{
   display: grid;
@@ -252,8 +255,6 @@ h5 {
     "project3    project4"
   ;
 }
-
-
 
 .projects-item{
   background-color: var(--clr-dark-boxes-bg);
@@ -284,11 +285,14 @@ h5 {
   aspect-ratio: 1/1;
   width: 296px;
 
-  padding: 30px;
+  padding: 25px;
   text-align: left;
   place-content: left;
   align-items: flex-start;
   justify-content: flex-start;
+  flex-direction: column;
+
+  display: flex;
   flex-direction: column;
 }
 
@@ -297,7 +301,8 @@ h5 {
 }
 
 .project-info p{
-  font-size: 0.9rem
+  font-size: 0.9rem;
+  margin: 0;
 }
 
 .project-tools{
@@ -309,7 +314,6 @@ h5 {
   height: 40px;
   margin-right: 10px;
 }
-
 
 
 .project1{
@@ -327,10 +331,78 @@ h5 {
 .project4{
   grid-area: project4;
 }
+
 /*#endregion*/
 
 
-/*#region Art*/
+/*#region Projects Button Play*/
+
+.container-button-play{
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  align-self: center;
+  margin-top: 1rem;
+  width: 300px;
+  height: 40px;
+}
+
+.button-play{
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  align-self: center;
+  width: 120px;
+  height: 30px;
+  border-radius: 2rem;
+  background: var(--clr-light-text);
+  border-width: 0px;
+  border-style: solid;
+  border-color: tomato;
+  animation: anim-play 2s linear infinite;
+  transition: border-width 0.1s ease-out 0s, width 0.1s ease-out 0s;
+}
+
+.button-play:hover{
+  border-width: 5px;
+  width: 140px;
+}
+
+@keyframes anim-play {
+  50%{
+    filter: hue-rotate(350deg);
+  }
+}
+
+.button-play:hover img{
+  width: 20px;
+  margin-left: 5px;
+}
+
+.button-play img{
+  width: 0px;
+  margin-left: 0px;
+  transition: width 0.2s ease-out 0s, margin-left 0.2s ease-out 0s;
+}
+
+.button-play p{
+  color: var(--clr-dark-boxes-bg);
+  font-size: 1rem;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.button-play a{
+  text-decoration: none;
+}
+
+/*#endregion*/
+
+
+/*#endregion*/
+
+
+/*#region Art Section*/
 
 .art-grid{
   display: grid;
