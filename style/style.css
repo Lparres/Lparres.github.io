@@ -1,9 +1,16 @@
 /*#region Color Variables*/
 
 :root {
+  --clr-green:#53C264;
+  --clr-gold:#ECB046;
+  --clr-blue:#00C8FF;
+  --clr-purple1:#D795FA;
+  --clr-purple2:#E6B6FF;
+
   --clr-light-text: #F7F7F7;
-  --clr-vivid-blue-title: #00C8FF;
-  --clr-vivid-blue-hover: #00C8FF;
+  --clr-title: #00C8FF;
+  --clr-hover: #53C264;
+  --clr-button: #53C264;
   --clr-dark-boxes-bg: #1C1E23;
   --clr-dark-boxes-bg-hover: #2f3033;
 }
@@ -50,7 +57,7 @@ h2 {
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-  color: var(--clr-vivid-blue-title);
+  color: var(--clr-title);
 }
 
 h3 {
@@ -157,7 +164,7 @@ h5 {
   width: 30%;
   height: 250%;
   /*background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 200, 255, 0.9) 50%, rgba(255, 255, 255, 0));*/
-  background: var(--clr-vivid-blue-hover);
+  background: var(--clr-hover);
 
   transform: rotate(45deg);
   opacity: 0%;
@@ -209,7 +216,7 @@ h5 {
   margin-top: 0.5rem;
   padding: 0.6rem 1rem 0.6rem 1rem;
   border-radius: 0.4rem;
-  background-color: var(--clr-light-text);
+  background-color: var(--clr-button);
   text-decoration: none;
   
 }
@@ -232,6 +239,86 @@ h5 {
   margin-left: 0px;
   transition: width 0.2s ease-out 0s, margin-left 0.2s ease-out 0s;
 }
+
+/*#endregion*/
+
+
+/*#region Buttons Mail*/
+
+.container-buttons-mail{
+  align-self: center;
+  display: flex;
+  justify-content: space-around;
+  width: 200px;
+  height: 45px;
+}
+
+.button-mail{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 0.6rem;
+  background-color: var(--clr-button);
+  transition: width 0.2s ease-out 0s;
+}
+
+.button-mail img{
+  width: 35px;
+  height: 35px;
+  transition: width 0.2s ease-out 0s;
+}
+
+.button-mail a{
+  display: flex;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  transition: width 0.2s ease-out 0s;
+  text-decoration: none;
+}
+
+.button-mail p{
+  color: var(--clr-dark-boxes-bg);
+  font-size: 1rem;
+  font-weight: 700;
+  font-style: normal;
+
+  width: 0px;
+  overflow: hidden; 
+  white-space: nowrap;
+
+  transition: width 0.2s ease-out 0s;
+}
+
+.button-mail:hover{
+  width: 90px;
+}
+
+.button-mail:hover img{
+  width: 0px;
+}
+
+.button-mail:hover a{
+  cursor: pointer;
+  width: 90px;
+}
+
+.button-mail:hover p{
+  width: 90px;
+}
+
+/* Para que haya feedback al pulsar el botón
+.button-mail:active{
+  border: 2px solid var(--clr-light-text);
+}
+
+.button-mail:active p{
+  color: var(--clr-light-text);
+}
+*/
 
 /*#endregion*/
 
@@ -305,6 +392,10 @@ h5 {
   margin: 0;
 }
 
+.project-description{
+  height: 100px;
+}
+
 .project-tools{
   margin: 15px 0px;
 }
@@ -342,7 +433,6 @@ h5 {
   justify-content: center;
   place-items: center;
   align-self: center;
-  margin-top: 1rem;
   width: 300px;
   height: 40px;
 }
@@ -355,17 +445,20 @@ h5 {
   width: 120px;
   height: 30px;
   border-radius: 2rem;
-  background: var(--clr-light-text);
+  
+  background:var(--clr-button);
   border-width: 0px;
   border-style: solid;
   border-color: tomato;
-  animation: anim-play 2s linear infinite;
+  
   transition: border-width 0.1s ease-out 0s, width 0.1s ease-out 0s;
 }
 
 .button-play:hover{
   border-width: 5px;
   width: 140px;
+  background: var(--clr-light-text);
+  animation: anim-play 2s linear infinite;
 }
 
 @keyframes anim-play {
@@ -393,6 +486,7 @@ h5 {
 }
 
 .button-play a{
+  
   text-decoration: none;
 }
 
@@ -472,7 +566,8 @@ h5 {
   background-image: url("../src/img/flag_spain.png");
   background-position: center;
   background-size: 100%;
-  transition: background-size 0.4s ease-out -0.1s;
+  opacity: 70%;
+  transition: background-size 0.4s ease-out -0.1s, opacity 0.2s ease-out 0s;
 }
 
 .es a{
@@ -483,9 +578,10 @@ h5 {
 
 .es:hover{
   cursor: pointer;
-  border: solid 3px var(--clr-vivid-blue-hover);
-  box-shadow: 0px 0px 10px 1px var(--clr-vivid-blue-hover);
+  border: solid 3px var(--clr-hover);
+  box-shadow: 0px 0px 10px 1px var(--clr-hover);
   background-size: 120%;
+  opacity: 100%;
 }
 
 /*#endregion*/
@@ -499,7 +595,8 @@ h5 {
   background-image: url("../src/img/flag_uk.svg");
   background-position: center;
   background-size: 100%;
-  transition: background-size 0.4s ease-out -0.1s;
+  opacity: 70%;
+  transition: background-size 0.4s ease-out -0.1s, opacity 0.2s ease-out 0s;
 }
 
 .en a{
@@ -510,9 +607,10 @@ h5 {
 
 .en:hover{
   cursor: pointer;
-  border: solid 3px var(--clr-vivid-blue-hover);
-  box-shadow: 0px 0px 10px 1px var(--clr-vivid-blue-hover);
+  border: solid 3px var(--clr-hover);
+  box-shadow: 0px 0px 10px 1px var(--clr-hover);
   background-size: 120%;
+  opacity: 100%;
 }
 
 /*#endregion*/
@@ -534,7 +632,7 @@ h5 {
 
 .projects:hover{
   background-color: var(--clr-dark-boxes-bg-hover);
-  box-shadow: 0px 0px 10px 1px var(--clr-vivid-blue-hover);
+  box-shadow: 0px 0px 10px 1px var(--clr-hover);
 }
 
 /*#endregion*/
@@ -563,7 +661,7 @@ h5 {
 .github:hover{
   background-color: var(--clr-dark-boxes-bg-hover);
 
-  box-shadow: 0px 0px 10px 1px var(--clr-vivid-blue-hover);
+  box-shadow: 0px 0px 10px 1px var(--clr-hover);
 }
 
 /*#endregion*/
@@ -600,7 +698,7 @@ h5 {
 .art:hover{
   background-color: var(--clr-dark-boxes-bg-hover);
 
-  box-shadow: 0px 0px 10px 1px var(--clr-vivid-blue-hover)
+  box-shadow: 0px 0px 10px 1px var(--clr-hover)
 }
 
 .art h3 {
@@ -635,7 +733,7 @@ h5 {
 .itchio:hover{
   cursor: pointer;
   background-color: #FA5C5C;
-  box-shadow: 0px 0px 10px 1px var(--clr-vivid-blue-hover)
+  box-shadow: 0px 0px 10px 1px var(--clr-hover)
 
 }
 
@@ -654,12 +752,14 @@ h5 {
   aspect-ratio: 2 / 1;
 }
 
-.mail p{
+.mail-text{
   font-size: 1.2rem;
   font-family: "Josefin Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: italic;
+  margin: 1rem;
+  margin-top: 0.5rem;
 }
 
 /*#endregion*/

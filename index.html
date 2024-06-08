@@ -9,11 +9,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- <link rel="icon" type="image/png" href="srcPaginaWeb/img/Favicon.png" /> -->
-  <link rel="stylesheet" href="./styles/styles.css" type="text/css">
+  <link rel="stylesheet" href="./style/style.css" type="text/css">
 
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 
-  <script src="i18n/i18n.js"></script>
+  <script src="src/scripts/i18n.js"></script>
+  <script src="src/scripts/copyText.js"></script>
   <!-- <script src="main.js"></script>
   <script src="phaserLib/phaser.js"></script>
   <script src="srcJuego/scripts/Game.js" type="module"></script> -->
@@ -26,7 +27,7 @@
 
     <div class="grid-item about">
       <h2 data-i18n="about-title"></h2>
-      <p data-i18n="about-text">Un apasionado del mundo de los videojuegos, con un firme compromiso por contribuir en la industria. Mi naturaleza curiosa y proactiva me impulsa a superar nuevos retos y demostrar mi talento en cada proyecto que me involucro.</p>
+      <p data-i18n="about-text"></p>
       <div class="container-buttons-about">
         <a class="button-about" href="https://www.linkedin.com/in/luisparres/" target="_blank">
           <p data-i18n="about-button1"></p>
@@ -80,7 +81,24 @@
     </div>
 
     <div class="grid-item mail">
-      <p data-i18n="mail"></p>
+      <p class="mail-text" data-i18n="mail"></p>
+      <div class="container-buttons-mail">
+        
+        <div class="button-mail" onclick="copyContent()">
+          <a>
+            <img src="src/img/icons/icon_copy.svg">
+            <p data-i18n="button-copy"></p>
+          </a>    
+        </div>
+
+        <div class="button-mail">
+          <a href="mailto:lparres2000@gmail.com?subject=Hello%20Luis" target="_blank">
+            <img src="src/img/icons/icon_mail.svg">
+            <p data-i18n="button-mail"></p>
+          </a>     
+        </div>
+        
+      </div>
     </div>
 
     <div class="grid-item game">
@@ -118,7 +136,9 @@
           <img src="./src/img/icons/icon_cpp.svg" alt="cpp" />
           <img src="./src/img/icons/icon_sdl.svg" alt="sdl" />
         </div>
-        <p data-i18n="game1-description"></p>
+        <div class="project-description">
+          <p data-i18n="game1-description"></p>
+        </div>
         <div class="container-button-play">
           <div class="button-play">
             <a href="https://nievalon.itch.io/hollenhaus" target="_blank">
