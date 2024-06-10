@@ -17,5 +17,11 @@
     "art-subtitle": "These are some of the renders I have worked on",
     "button-play": "Play now!",
     "game1-title": "Höllenhaus",
-    "game1-description": "Not even ghosts escape the labour world! Take on clients and give a bad night to whoever they ask."
+    "game1-description": "Not even ghosts escape the labour world! Take on clients and give a bad night to whoever they ask.",
+    "game2-title": "Arko",
+    "game2-description": "Sett off on a new adventure with Arko, evolving together in a wonderful fantasy world.",
+    "game3-title": "Survival Spectrum",
+    "game3-description": "Survival wave action game based on the MBTI test. Developed with Phaser and hosted on its own website.",
+    "game4-title": "Procedural animation",
+    "game4-description": "Final degree project where procedural animation techniques are investigated and implemented in video games."
 }
