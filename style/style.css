@@ -18,6 +18,28 @@
 /*#endregion*/
 
 
+/*#region Variables Responsive*/
+
+:root{
+
+  --fontsize-name-title: 85px;
+  --fontsize-name-subtitle: 24px;
+  --name-subtitle-width: 400px;
+  --margin-name-title: 10px;
+  --margin-name-subtitle: 10px;
+
+  --fontsize-boxes-title: 35px;
+
+  --fontsize-about-p: 16px;
+  --fontsize-button-about: 20px;
+  --padding-about: 35px;
+  --padding-width-button-about: 16px;
+  --padding-height-button-about: 10px;
+  --margin-top-button-about: 8px;
+}
+
+/*#endregion*/
+
 
 /*#region Etiquetas*/
 
@@ -29,7 +51,7 @@ body {
 }
 
 p {
-  font-size: 1rem;
+  font-size: var(--fontsize-about-p);
   font-family: "Nunito", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -39,20 +61,20 @@ p {
 }
 
 h1 {
-  font-size: 5.3rem;
+  font-size: var(--fontsize-name-title);
   font-family: "Josefin Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: italic;
   color: var(--clr-light-text);
 
-  margin: 10px;
+  margin: var(--margin-name-title);
 }
 
 h2 {
   margin: 0px;
   padding: 0px;
-  font-size: 2.3rem;
+  font-size: var(--fontsize-boxes-title);
   font-family: "Josefin Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
@@ -113,14 +135,13 @@ h5 {
   
   grid-template-areas:
 
-    "about    about     about     about     photo   photo   es        en"
-    "about    about     about     about     photo   photo   projects  projects"
-    "github   github    name      name      name    name    projects  projects"
-    "art      art       name      name      name    name    itchio    itchio"
-    "art      art       mail      mail      game    game    game      game"
-    "skills   skills    skills    skills    game    game    game      game"
-    "idk      idk       idk       idk       game    game    game      game"
-    "idk      idk       idk       idk       game    game    game      game"
+    "about    about     about     about     photo     photo     es        en"
+    "about    about     about     about     photo     photo     projects  projects"
+    "github   github    name      name      name      name      projects  projects"
+    "art      art       name      name      name      name      itchio    itchio"
+    "art      art       mail      mail      skills    skills    skills    skills"
+    "game     game      game      game      game      game      game      game"
+    "game     game      game      game      game      game      game      game"
   ;
 }
 
@@ -213,8 +234,8 @@ h5 {
   display: flex;
   align-items: center;
   margin-left: 2rem;
-  margin-top: 0.5rem;
-  padding: 0.6rem 1rem 0.6rem 1rem;
+  margin-top: var(--margin-top-button-about);
+  padding: var(--padding-height-button-about) var(--padding-width-button-about) var(--padding-height-button-about) var(--padding-width-button-about);
   border-radius: 0.4rem;
   background-color: var(--clr-button);
   text-decoration: none;
@@ -224,7 +245,7 @@ h5 {
 .button-about p{
   margin: 0;
   color: var(--clr-dark-boxes-bg);
-  font-size: 1.2rem;
+  font-size: var(--fontsize-button-about);
   font-weight: 700;
   font-style: normal;
 }
@@ -565,10 +586,8 @@ h5 {
 .about {
   grid-area: about;
   aspect-ratio: 2 / 1;
-
-  padding: 35px;
+  padding: var(--padding-about);
   text-align: left;
-  place-content: left;
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
@@ -581,7 +600,7 @@ h5 {
 
 .photo {
   grid-area: photo;
-
+  aspect-ratio: 1 / 1;
   background-image: url("../src/img/foto_perfil.webp");
   background-size: cover;
   background-position: center;
@@ -707,8 +726,11 @@ h5 {
 }
 
 .name h2 {
-  font-size: 1.5rem;
-  margin: 10px;
+  font-size: var(--fontsize-name-subtitle);
+  margin: var(--margin-name-subtitle);
+  width: var(--name-subtitle-width);
+  line-height: 1.5;
+  align-self: center;
 }
 
 /*#endregion*/
@@ -802,7 +824,7 @@ h5 {
 
 .game {
   grid-area: game;
-
+  aspect-ratio: 12 / 8;
   padding-top: 50px;
   text-align: center;
   place-content: center;
@@ -880,23 +902,16 @@ h5 {
 /*#endregion*/
 
 
-/*#region Idk*/
-
-.idk {
-  grid-area: idk;
-  aspect-ratio: 2 / 1;
-}
-
-/*#endregion*/
-
-
 /*#endregion*/
 
 
 
 /*#region Sistema Responsive*/
 
-@media (max-width: 1000px) {
+
+/*#region General Layout*/
+
+@media (max-width: 950px) {
   .grid-container {
     grid-template-areas:
       "name   name    name    photo   photo     es"
@@ -909,44 +924,55 @@ h5 {
       "game   game    game    game    game      game"
       "game   game    game    game    game      game"
       "game   game    game    game    game      game"
-      "idk    idk     idk     idk     idk       idk"
     ;
+  }
+
+  .github{
+    aspect-ratio: 1 / 1;
+  }
+
+  .github img{
+    max-width: 60%;
+  }
+
+  .itchio{
+    aspect-ratio: 1 / 1;
+  }
+
+  .itchio img{
+    max-width: 60%;
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
   .grid-container {
     grid-template-areas:
-      "name   name    name    photo   photo     es"
-      "name   name    name    photo   photo     en"
-      "about  about   about   about   mail      mail"
-      "about  about   about   about   projects  projects"
-      "art    art     itchio  github  projects  projects"
-      "art    art     skills  skills  skills    skills"
-      "game   game    game    game    game      game"
-      "game   game    game    game    game      game"
-      "game   game    game    game    game      game"
-      "game   game    game    game    game      game"
-      "idk    idk     idk     idk     idk       idk"
+      "name       name        photo     photo"
+      "name       name        photo     photo"
+      "about      about       about     es"
+      "about      about       about     en"
+      "projects   projects    art       art"
+      "projects   projects    art       art"
+      "github     mail        mail     itchio"
+      "skills     skills      skills    skills"
+      "game       game        game      game"
     ;
   }
-}
 
-@media (max-width: 600px) {
-  .grid-container {
-    grid-template-areas:
-      "name   name    name    photo   photo     es"
-      "name   name    name    photo   photo     en"
-      "about  about   about   about   mail      mail"
-      "about  about   about   about   projects  projects"
-      "art    art     itchio  github  projects  projects"
-      "art    art     skills  skills  skills    skills"
-      "game   game    game    game    game      game"
-      "game   game    game    game    game      game"
-      "game   game    game    game    game      game"
-      "game   game    game    game    game      game"
-      "idk    idk     idk     idk     idk       idk"
-    ;
+  .about{
+    aspect-ratio: 3 / 2 ;
+  }
+
+  .projects{
+    aspect-ratio: 1 / 1;
+  }
+
+  .art{
+    aspect-ratio: 1 / 1;
+  }
+
+  .mail{
+    aspect-ratio: unset;
   }
 }
 
@@ -967,6 +993,243 @@ h5 {
     ;
   }
 }
+
+/*#endregion*/
+
+/*#region Specific Variables*/
+
+@media (max-width: 1200px){
+  :root{
+    --fontsize-name-title: 80px;
+    --fontsize-name-subtitle: 23px;
+
+    --fontsize-boxes-title: 32px;
+
+    --fontsize-about-p: 15px;
+    --fontsize-button-about: 18px;
+    --padding-about: 30px;
+    --padding-width-button-about: 15px;
+    --padding-height-button-about: 8px;
+    --margin-top-button-about: 4px;
+  }
+}
+
+@media (max-width: 1100px){
+  :root{
+    --fontsize-name-title:75px;
+    --fontsize-name-subtitle: 22px;
+
+    --fontsize-boxes-title: 30px;
+
+    --fontsize-about-p: 14px;
+    --fontsize-button-about: 16px;
+    --padding-about: 25px;
+    --padding-width-button-about: 10px;
+    --padding-height-button-about: 6px;
+    --margin-top-button-about: 0px;
+  }
+}
+
+@media (max-width: 1000px){
+  :root{
+    --fontsize-name-title: 70px;
+    --fontsize-name-subtitle: 20px;
+
+    --fontsize-boxes-title: 28px;
+
+    --fontsize-about-p: 14px;
+    --fontsize-button-about: 16px;
+    --padding-about: 25px;
+    --padding-width-button-about: 10px;
+    --padding-height-button-about: 6px;
+    --margin-top-button-about: 0px;
+  }
+}
+
+@media (max-width: 950px){  /*Cambio de layout*/
+  :root{
+    --fontsize-name-title: 70px;
+    --fontsize-name-subtitle: 20px;
+    --name-subtitle-width: 350px;
+
+    --fontsize-boxes-title: 35px;
+
+    --fontsize-about-p: 16px;
+    --fontsize-button-about: 20px;
+    --padding-about: 35px;
+    --padding-width-button-about: 16px;
+    --padding-height-button-about: 10px;
+    --margin-top-button-about: 8px;
+  }
+}
+
+@media (max-width: 900px){
+  :root{
+    --fontsize-name-title: 60px;
+    --fontsize-name-subtitle: 18px;
+    --name-subtitle-width: 300px;
+
+    --fontsize-boxes-title: 32px;
+
+    --fontsize-about-p: 15px;
+    --fontsize-button-about: 18px;
+    --padding-about: 30px;
+    --padding-width-button-about: 14px;
+    --padding-height-button-about: 8px;
+    --margin-top-button-about: 4px;
+  }
+}
+
+@media (max-width: 800px){
+  :root{
+    --fontsize-name-title: 55px;
+    --fontsize-name-subtitle: 17px;
+    --name-subtitle-width: 270px;
+
+    --fontsize-boxes-title: 30px;
+
+    --fontsize-about-p: 14px;
+    --fontsize-button-about: 16px;
+    --padding-about: 25px;
+    --padding-width-button-about: 10px;
+    --padding-height-button-about: 6px;
+    --margin-top-button-about: 0px;
+  }
+}
+
+@media (max-width: 750px){
+  :root{
+    --fontsize-name-title: 50px;
+    --fontsize-name-subtitle: 16px;
+    --name-subtitle-width: 250px;
+
+    --fontsize-boxes-title: 28px;
+
+    --fontsize-about-p: 14px;
+    --fontsize-button-about: 16px;
+    --padding-about: 22px;
+    --padding-width-button-about: 10px;
+    --padding-height-button-about: 6px;
+    --margin-top-button-about: 0px;
+  }
+}
+
+@media (max-width: 700px){  /*Cambio de layout*/
+  :root{
+    --fontsize-name-title: 70px;
+    --fontsize-name-subtitle: 20px;
+    --name-subtitle-width: 170px;
+    --margin-name-title: 9px;
+    --margin-name-subtitle: 9px;
+
+
+    --fontsize-boxes-title: 33px;
+
+    --fontsize-about-p: 16px;
+    --fontsize-button-about: 20px;
+    --padding-about: 30px;
+    --padding-width-button-about: 14px;
+    --padding-height-button-about: 8px;
+    --margin-top-button-about: 8px;
+  }
+}
+
+@media (max-width: 650px){  /*Cambio de layout*/
+  :root{
+    --fontsize-name-title: 60px;
+    --fontsize-name-subtitle: 18px;
+    --name-subtitle-width: 150px;
+    --margin-name-title: 8px;
+    --margin-name-subtitle: 8px;
+
+    --fontsize-boxes-title: 30px;
+
+    --fontsize-about-p: 15px;
+    --fontsize-button-about: 18px;
+    --padding-about: 28px;
+    --padding-width-button-about: 12px;
+    --padding-height-button-about: 7px;
+    --margin-top-button-about: 6px;
+  }
+}
+
+@media (max-width: 600px){  /*Cambio de layout*/
+  :root{
+    --fontsize-name-title: 57px;
+    --fontsize-name-subtitle: 17px;
+    --name-subtitle-width: 130px;
+    --margin-name-title: 7px;
+    --margin-name-subtitle: 7px;
+
+    --fontsize-boxes-title: 28px;
+
+    --fontsize-about-p: 14px;
+    --fontsize-button-about: 16px;
+    --padding-about: 24px;
+    --padding-width-button-about: 10px;
+    --padding-height-button-about: 6px;
+    --margin-top-button-about: 4px;
+  }
+}
+
+@media (max-width: 550px){  /*Cambio de layout*/
+  :root{
+    --fontsize-name-title: 53px;
+    --fontsize-name-subtitle: 15px;
+    --name-subtitle-width: 120px;
+    --margin-name-title: 6px;
+    --margin-name-subtitle: 6px;
+
+    --fontsize-boxes-title: 26px;
+
+    --fontsize-about-p: 13px;
+    --fontsize-button-about: 15px;
+    --padding-about: 20px;
+    --padding-width-button-about: 8px;
+    --padding-height-button-about: 4px;
+    --margin-top-button-about: 0px;
+  }
+
+  .button-about:hover img{
+    width: 23px;
+    margin-left: 9px;
+  }
+}
+
+@media (max-width: 500px){  /*Cambio de layout*/
+  :root{
+    --fontsize-name-title: 48px;
+    --fontsize-name-subtitle: 14px;
+    --name-subtitle-width: 110px;
+    --margin-name-title: 4px;
+    --margin-name-subtitle: 4px;
+
+    --fontsize-boxes-title: 22px;
+
+    --fontsize-about-p: 12px;
+    --fontsize-button-about: 14px;
+    --padding-about:18px;
+    --padding-width-button-about: 6px;
+    --padding-height-button-about: 3px;
+    --margin-top-button-about: 0px;
+  }
+
+  .about p{
+    margin-top: 5px;
+  }
+
+  .button-about p{
+    margin: 0px;
+  }
+
+  .button-about:hover img{
+    width: 20px;
+    margin-left: 8px;
+  }
+}
+
+/*#endregion*/
+
 
 /*#endregion*/
 
