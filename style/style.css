@@ -36,6 +36,17 @@
   --padding-width-button-about: 16px;
   --padding-height-button-about: 10px;
   --margin-top-button-about: 8px;
+
+  --fontsize--mail: 20px;
+  --margin-mail-text: 16px;
+  --margin-top-mail-text: 8px;
+
+  --width-container-buttons-mail: 200px;
+  --height-container-buttons-mail: 45px;
+  --size-button-mail: 40px;
+  --size-img-button-mail: 35px;
+  --fontsize-button-mail: 16px;
+  --width-button-mail-onhover: 90px;
 }
 
 /*#endregion*/
@@ -271,8 +282,8 @@ h5 {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 200px;
-  height: 45px;
+  width: var(--width-container-buttons-mail);
+  height: var(--height-container-buttons-mail);
 }
 
 .button-mail{
@@ -280,31 +291,31 @@ h5 {
   align-items: center;
   justify-content: center;
   padding: 0.2rem;
-  width: 40px;
-  height: 40px;
+  width: var(--size-button-mail);
+  height: var(--size-button-mail);
   border-radius: 0.6rem;
   background-color: var(--clr-button);
   transition: width 0.2s ease-out 0s;
 }
 
 .button-mail img{
-  width: 35px;
-  height: 35px;
+  width: var(--size-img-button-mail);
+  height: var(--size-img-button-mail);
   transition: width 0.2s ease-out 0s;
 }
 
 .button-mail a{
   display: flex;
   align-items: center;
-  width: 35px;
-  height: 35px;
+  width: var(--size-img-button-mail);
+  height: var(--size-img-button-mail);
   transition: width 0.2s ease-out 0s;
   text-decoration: none;
 }
 
 .button-mail p{
   color: var(--clr-dark-boxes-bg);
-  font-size: 1rem;
+  font-size: var(--fontsize-button-mail);
   font-weight: 800;
   font-style: normal;
 
@@ -316,7 +327,7 @@ h5 {
 }
 
 .button-mail:hover{
-  width: 90px;
+  width: var(--width-button-mail-onhover);
 }
 
 .button-mail:hover img{
@@ -325,11 +336,11 @@ h5 {
 
 .button-mail:hover a{
   cursor: pointer;
-  width: 90px;
+  width: var(--width-button-mail-onhover);
 }
 
 .button-mail:hover p{
-  width: 90px;
+  width: var(--width-button-mail-onhover);
 }
 
 
@@ -808,13 +819,13 @@ h5 {
 }
 
 .mail-text{
-  font-size: 1.2rem;
+  font-size: var(--fontsize--mail);
   font-family: "Josefin Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: italic;
-  margin: 1rem;
-  margin-top: 0.5rem;
+  margin: var(--margin-mail-text);
+  margin-top: var(--margin-top-mail-text);
 }
 
 /*#endregion*/
@@ -1011,6 +1022,17 @@ h5 {
     --padding-width-button-about: 15px;
     --padding-height-button-about: 8px;
     --margin-top-button-about: 4px;
+
+    --fontsize--mail: 18px;
+    --margin-mail-text: 14px;
+    --margin-top-mail-text: 8px;
+  
+    --width-container-buttons-mail:190px;
+    --height-container-buttons-mail: 43px;
+    --size-button-mail: 38px;
+    --size-img-button-mail: 33px;
+    --fontsize-button-mail: 15px;
+    --width-button-mail-onhover: 85px;
   }
 }
 
@@ -1027,6 +1049,17 @@ h5 {
     --padding-width-button-about: 10px;
     --padding-height-button-about: 6px;
     --margin-top-button-about: 0px;
+
+    --fontsize--mail: 17px;
+    --margin-mail-text: 10px;
+    --margin-top-mail-text: 8px;
+  
+    --width-container-buttons-mail:175px;
+    --height-container-buttons-mail: 40px;
+    --size-button-mail: 35px;
+    --size-img-button-mail: 30px;
+    --fontsize-button-mail: 14px;
+    --width-button-mail-onhover: 80px;
   }
 }
 
@@ -1043,6 +1076,17 @@ h5 {
     --padding-width-button-about: 10px;
     --padding-height-button-about: 6px;
     --margin-top-button-about: 0px;
+
+    --fontsize--mail: 16px;
+    --margin-mail-text: 6px;
+    --margin-top-mail-text: 8px;
+  
+    --width-container-buttons-mail:160px;
+    --height-container-buttons-mail: 40px;
+    --size-button-mail: 30px;
+    --size-img-button-mail: 27px;
+    --fontsize-button-mail: 13px;
+    --width-button-mail-onhover: 75px;
   }
 }
 
@@ -1060,6 +1104,17 @@ h5 {
     --padding-width-button-about: 16px;
     --padding-height-button-about: 10px;
     --margin-top-button-about: 8px;
+
+    --fontsize--mail: 19px;
+    --margin-mail-text: 16px;
+    --margin-top-mail-text: 8px;
+  
+    --width-container-buttons-mail: 200px;
+    --height-container-buttons-mail: 45px;
+    --size-button-mail: 40px;
+    --size-img-button-mail: 35px;
+    --fontsize-button-mail: 16px;
+    --width-button-mail-onhover: 90px;
   }
 }
 
@@ -1077,6 +1132,17 @@ h5 {
     --padding-width-button-about: 14px;
     --padding-height-button-about: 8px;
     --margin-top-button-about: 4px;
+
+    --fontsize--mail: 17px;
+    --margin-mail-text: 10px;
+    --margin-top-mail-text: 6px;
+  
+    --width-container-buttons-mail: 190px;
+    --height-container-buttons-mail: 43px;
+    --size-button-mail: 38px;
+    --size-img-button-mail: 33px;
+    --fontsize-button-mail: 15px;
+    --width-button-mail-onhover: 85px;
   }
 }
 
@@ -1094,6 +1160,17 @@ h5 {
     --padding-width-button-about: 10px;
     --padding-height-button-about: 6px;
     --margin-top-button-about: 0px;
+
+    --fontsize--mail: 16px;
+    --margin-mail-text: 8px;
+    --margin-top-mail-text: 6px;
+  
+    --width-container-buttons-mail: 175px;
+    --height-container-buttons-mail: 43px;
+    --size-button-mail: 35px;
+    --size-img-button-mail: 30px;
+    --fontsize-button-mail: 14px;
+    --width-button-mail-onhover: 80px;
   }
 }
 
@@ -1111,6 +1188,17 @@ h5 {
     --padding-width-button-about: 10px;
     --padding-height-button-about: 6px;
     --margin-top-button-about: 0px;
+
+    --fontsize--mail: 15px;
+    --margin-mail-text: 4px;
+    --margin-top-mail-text: 6px;
+  
+    --width-container-buttons-mail: 160px;
+    --height-container-buttons-mail: 40px;
+    --size-button-mail: 30px;
+    --size-img-button-mail: 27px;
+    --fontsize-button-mail: 13px;
+    --width-button-mail-onhover: 75px;
   }
 }
 
@@ -1131,10 +1219,21 @@ h5 {
     --padding-width-button-about: 14px;
     --padding-height-button-about: 8px;
     --margin-top-button-about: 8px;
+
+    --fontsize--mail: 20px;
+    --margin-mail-text: 16px;
+    --margin-top-mail-text: 8px;
+  
+    --width-container-buttons-mail: 200px;
+    --height-container-buttons-mail: 45px;
+    --size-button-mail: 40px;
+    --size-img-button-mail: 35px;
+    --fontsize-button-mail: 16px;
+    --width-button-mail-onhover: 90px;
   }
 }
 
-@media (max-width: 650px){  /*Cambio de layout*/
+@media (max-width: 650px){
   :root{
     --fontsize-name-title: 60px;
     --fontsize-name-subtitle: 18px;
@@ -1150,10 +1249,21 @@ h5 {
     --padding-width-button-about: 12px;
     --padding-height-button-about: 7px;
     --margin-top-button-about: 6px;
+
+    --fontsize--mail: 18px;
+    --margin-mail-text: 14px;
+    --margin-top-mail-text: 8px;
+  
+    --width-container-buttons-mail: 180px;
+    --height-container-buttons-mail: 42px;
+    --size-button-mail: 37px;
+    --size-img-button-mail: 33px;
+    --fontsize-button-mail: 15px;
+    --width-button-mail-onhover: 85px;
   }
 }
 
-@media (max-width: 600px){  /*Cambio de layout*/
+@media (max-width: 600px){
   :root{
     --fontsize-name-title: 57px;
     --fontsize-name-subtitle: 17px;
@@ -1169,10 +1279,21 @@ h5 {
     --padding-width-button-about: 10px;
     --padding-height-button-about: 6px;
     --margin-top-button-about: 4px;
+
+    --fontsize--mail: 16px;
+    --margin-mail-text: 10px;
+    --margin-top-mail-text: 8px;
+  
+    --width-container-buttons-mail: 160px;
+    --height-container-buttons-mail: 40px;
+    --size-button-mail: 33px;
+    --size-img-button-mail: 30px;
+    --fontsize-button-mail: 14px;
+    --width-button-mail-onhover: 80px;
   }
 }
 
-@media (max-width: 550px){  /*Cambio de layout*/
+@media (max-width: 550px){
   :root{
     --fontsize-name-title: 53px;
     --fontsize-name-subtitle: 15px;
@@ -1188,6 +1309,17 @@ h5 {
     --padding-width-button-about: 8px;
     --padding-height-button-about: 4px;
     --margin-top-button-about: 0px;
+
+    --fontsize--mail: 15px;
+    --margin-mail-text: 8px;
+    --margin-top-mail-text: 8px;
+  
+    --width-container-buttons-mail: 140px;
+    --height-container-buttons-mail: 38px;
+    --size-button-mail: 30px;
+    --size-img-button-mail: 27px;
+    --fontsize-button-mail: 13px;
+    --width-button-mail-onhover: 70px;
   }
 
   .button-about:hover img{
@@ -1196,7 +1328,7 @@ h5 {
   }
 }
 
-@media (max-width: 500px){  /*Cambio de layout*/
+@media (max-width: 500px){
   :root{
     --fontsize-name-title: 48px;
     --fontsize-name-subtitle: 14px;
@@ -1208,10 +1340,21 @@ h5 {
 
     --fontsize-about-p: 12px;
     --fontsize-button-about: 14px;
-    --padding-about:18px;
+    --padding-about:15px;
     --padding-width-button-about: 6px;
     --padding-height-button-about: 3px;
     --margin-top-button-about: 0px;
+
+    --fontsize--mail: 14px;
+    --margin-mail-text: 4px;
+    --margin-top-mail-text: 8px;
+  
+    --width-container-buttons-mail: 120px;
+    --height-container-buttons-mail: 38px;
+    --size-button-mail: 26px;
+    --size-img-button-mail: 25px;
+    --fontsize-button-mail: 12px;
+    --width-button-mail-onhover: 65px;
   }
 
   .about p{
