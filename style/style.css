@@ -47,6 +47,18 @@
   --size-img-button-mail: 35px;
   --fontsize-button-mail: 16px;
   --width-button-mail-onhover: 90px;
+
+  --padding-project-info: 25px;
+  --fontsize-project-info-title: 27px;
+  --fontsize-project-info-p: 14px;
+  --margin-top-bot-project-tools: 18px;
+  --size-project-tools-img: 40px;
+
+  --width-button-play: 120px;
+  --width-button-play-onhover: 140px;
+  --height-button-play: 30px;
+  --borderwidth-button-play-onhover: 5px;
+  --fontsize-button-play: 16px;
 }
 
 /*#endregion*/
@@ -405,7 +417,7 @@ h5 {
   aspect-ratio: 1/1;
   width: 296px;
 
-  padding: 25px;
+  padding: var(--padding-project-info);
   text-align: left;
   place-content: left;
   align-items: flex-start;
@@ -417,11 +429,11 @@ h5 {
 }
 
 .project-info h2{
-  font-size: 1.8rem
+  font-size:var(--fontsize-project-info-title);
 }
 
 .project-info p{
-  font-size: 0.9rem;
+  font-size: var(--fontsize-project-info-p);
   margin: 0;
 }
 
@@ -430,11 +442,11 @@ h5 {
 }
 
 .project-tools{
-  margin: 18px  0px 20px 0px;
+  margin: var(--margin-top-bot-project-tools) 0px;
 }
 
 .project-tools img{
-  height: 40px;
+  height: var(--size-project-tools-img);
   margin-right: 10px;
 }
 
@@ -465,8 +477,8 @@ h5 {
   justify-content: center;
   place-items: center;
   align-self: center;
-  width: 300px;
-  height: 40px;
+  width: var(--width-button-play-onhover);
+  height: var(--height-button-play);
 }
 
 .button-play{
@@ -474,8 +486,8 @@ h5 {
   justify-content: center;
   place-items: center;
   align-self: center;
-  width: 120px;
-  height: 30px;
+  width: var(--width-button-play);
+  height: var(--height-button-play);
   border-radius: 2rem;
   
   background:var(--clr-button);
@@ -487,8 +499,8 @@ h5 {
 }
 
 .button-play:hover{
-  border-width: 5px;
-  width: 140px;
+  border-width: var(--borderwidth-button-play-onhover);
+  width: var(--width-button-play-onhover);
   background: var(--clr-light-text);
   animation: anim-play 2s linear infinite;
 }
@@ -512,7 +524,7 @@ h5 {
 
 .button-play p{
   color: var(--clr-dark-boxes-bg);
-  font-size: 1rem;
+  font-size: var(--fontsize-button-play);
   font-weight: 700;
   font-style: normal;
 }
@@ -871,7 +883,7 @@ h5 {
 
 @keyframes scrollRight {
   to {
-    right: -20%;
+    right: -20% ;
   }
 }
 
@@ -953,6 +965,18 @@ h5 {
   .itchio img{
     max-width: 60%;
   }
+
+
+  .game-projects-grid{
+    grid-template-areas:
+    "project1"
+    "project2"
+    "project3"
+    "project4"
+    ;
+
+    max-width: 600px;
+  }
 }
 
 @media (max-width: 700px) {
@@ -1033,6 +1057,12 @@ h5 {
     --size-img-button-mail: 33px;
     --fontsize-button-mail: 15px;
     --width-button-mail-onhover: 85px;
+
+    --padding-project-info: 20px;
+    --fontsize-project-info-title: 25px;
+    --fontsize-project-info-p: 14px;
+    --margin-top-bot-project-tools: 12px;
+    --size-project-tools-img: 35px;
   }
 }
 
@@ -1060,6 +1090,18 @@ h5 {
     --size-img-button-mail: 30px;
     --fontsize-button-mail: 14px;
     --width-button-mail-onhover: 80px;
+
+    --padding-project-info: 17px;
+    --fontsize-project-info-title: 23px;
+    --fontsize-project-info-p: 13px;
+    --margin-top-bot-project-tools: 10px;
+    --size-project-tools-img: 30px;
+
+    --width-button-play: 110px;
+    --width-button-play-onhover: 130px;
+    --height-button-play: 29px;
+    --borderwidth-button-play-onhover: 4px;
+    --fontsize-button-play: 15px;
   }
 }
 
@@ -1087,6 +1129,18 @@ h5 {
     --size-img-button-mail: 27px;
     --fontsize-button-mail: 13px;
     --width-button-mail-onhover: 75px;
+
+    --padding-project-info: 15px;
+    --fontsize-project-info-title: 22px;
+    --fontsize-project-info-p: 13px;
+    --margin-top-bot-project-tools: 8px;
+    --size-project-tools-img: 25px;
+
+    --width-button-play: 100px;
+    --width-button-play-onhover: 120px;
+    --height-button-play: 28px;
+    --borderwidth-button-play-onhover: 4px;
+    --fontsize-button-play: 15px;
   }
 }
 
@@ -1115,6 +1169,12 @@ h5 {
     --size-img-button-mail: 35px;
     --fontsize-button-mail: 16px;
     --width-button-mail-onhover: 90px;
+
+    --padding-project-info: 25px;
+    --fontsize-project-info-title: 27px;
+    --fontsize-project-info-p: 14px;
+    --margin-top-bot-project-tools: 18px;
+    --size-project-tools-img: 40px;
   }
 }
 
@@ -1260,6 +1320,12 @@ h5 {
     --size-img-button-mail: 33px;
     --fontsize-button-mail: 15px;
     --width-button-mail-onhover: 85px;
+
+    --padding-project-info: 22px;
+    --fontsize-project-info-title: 26px;
+    --fontsize-project-info-p: 14px;
+    --margin-top-bot-project-tools: 15px;
+    --size-project-tools-img: 35px;
   }
 }
 
@@ -1290,6 +1356,12 @@ h5 {
     --size-img-button-mail: 30px;
     --fontsize-button-mail: 14px;
     --width-button-mail-onhover: 80px;
+
+    --padding-project-info: 20px;
+    --fontsize-project-info-title: 24px;
+    --fontsize-project-info-p: 14px;
+    --margin-top-bot-project-tools: 10px;
+    --size-project-tools-img: 30px;
   }
 }
 
@@ -1320,6 +1392,18 @@ h5 {
     --size-img-button-mail: 27px;
     --fontsize-button-mail: 13px;
     --width-button-mail-onhover: 70px;
+
+    --padding-project-info: 18px;
+    --fontsize-project-info-title: 22px;
+    --fontsize-project-info-p: 13px;
+    --margin-top-bot-project-tools: 8px;
+    --size-project-tools-img: 25px;
+
+    --width-button-play: 100px;
+    --width-button-play-onhover: 120px;
+    --height-button-play: 28px;
+    --borderwidth-button-play-onhover: 4px;
+    --fontsize-button-play: 15px;
   }
 
   .button-about:hover img{
@@ -1355,6 +1439,18 @@ h5 {
     --size-img-button-mail: 25px;
     --fontsize-button-mail: 12px;
     --width-button-mail-onhover: 65px;
+
+    --padding-project-info: 15px;
+    --fontsize-project-info-title: 19px;
+    --fontsize-project-info-p: 12px;
+    --margin-top-bot-project-tools: 5px;
+    --size-project-tools-img: 20px;
+
+    --width-button-play: 80px;
+    --width-button-play-onhover: 110px;
+    --height-button-play: 25px;
+    --borderwidth-button-play-onhover: 4px;
+    --fontsize-button-play: 13px;
   }
 
   .about p{
