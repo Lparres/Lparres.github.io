@@ -272,6 +272,7 @@ h5 {
   font-size: var(--fontsize-button-about);
   font-weight: 700;
   font-style: normal;
+  user-select: none;
 }
 
 .button-about:hover img{
@@ -335,7 +336,7 @@ h5 {
   width: 0px;
   overflow: hidden; 
   white-space: nowrap;
-
+  user-select: none;
   transition: width 0.2s ease-out 0s;
 }
 
@@ -359,7 +360,7 @@ h5 {
 
 /* Para que haya feedback al pulsar el botón */
 .button-mail:active{
-  border: 2px solid var(--clr-hover);
+  box-shadow: inset 4px 4px 12px #666666, inset -4px -4px 12px #ffffff;
 }
 /*
 .button-mail:active p{
@@ -528,6 +529,7 @@ h5 {
   font-size: var(--fontsize-button-play);
   font-weight: 700;
   font-style: normal;
+  user-select: none;
 }
 
 .button-play a{
@@ -1026,18 +1028,20 @@ h5 {
 @media (max-width: 450px) {
   .grid-container {
     grid-template-areas:
-      "name   name    name    photo   photo     es"
-      "name   name    name    photo   photo     en"
-      "about  about   about   about   mail      mail"
-      "about  about   about   about   projects  projects"
-      "art    art     itchio  github  projects  projects"
-      "art    art     skills  skills  skills    skills"
-      "game   game    game    game    game      game"
-      "game   game    game    game    game      game"
-      "game   game    game    game    game      game"
-      "game   game    game    game    game      game"
-      "idk    idk     idk     idk     idk       idk"
+    "name       name        photo     photo"
+    "name       name        photo     photo"
+    "about      about       about     es"
+    "about      about       about     en"
+    "projects   projects    art       art"
+    "projects   projects    art       art"
+    "github     mail        mail     itchio"
+    "skills     skills      skills    skills"
     ;
+  }
+
+  .game{
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -1488,6 +1492,128 @@ h5 {
   .button-about:hover img{
     width: 20px;
     margin-left: 8px;
+  }
+}
+
+@media (max-width: 450px){
+  :root{
+    --fontsize-name-title: 44px;
+    --fontsize-name-subtitle: 13px;
+    --name-subtitle-width: 100px;
+    --margin-name-title: 2px;
+    --margin-name-subtitle: 2px;
+
+    --fontsize-boxes-title: 18px;
+
+    --fontsize-about-p: 11px;
+    --fontsize-button-about: 13px;
+    --padding-about:10px;
+    --padding-width-button-about: 5px;
+    --padding-height-button-about: 2px;
+    --margin-top-button-about: 0px;
+
+    --fontsize--mail: 12px;
+    --margin-mail-text: 2px;
+    --margin-top-mail-text: 8px;
+  
+    --width-container-buttons-mail: 110px;
+    --height-container-buttons-mail: 35px;
+    --size-button-mail: 22px;
+    --size-img-button-mail: 20px;
+    --fontsize-button-mail: 11px;
+    --width-button-mail-onhover: 60px;
+
+    --padding-project-info: 10px;
+    --fontsize-project-info-title: 17px;
+    --fontsize-project-info-p: 11px;
+    --margin-top-bot-project-tools: 5px;
+    --size-project-tools-img: 18px;
+
+    --width-button-play: 100px;
+    --width-button-play-onhover: 120px;
+    --height-button-play: 23px;
+    --borderwidth-button-play-onhover: 4px;
+    --fontsize-button-play: 12px;
+  }
+
+  .about p{
+    margin-top: 2px;
+    margin-bottom: 15px;
+  }
+
+  .button-about p{
+    margin: 0px;
+  }
+
+  .button-about:hover img{
+    width: 15px;
+    margin-left: 5px;
+  }
+
+  .button-play:hover img{
+    width: 17px;
+    margin-left: 5px;
+  }
+}
+
+@media (max-width: 415px){
+  :root{
+    --fontsize-name-title: 100px;
+    --fontsize-name-subtitle: 13px;
+    --name-subtitle-width: 100px;
+    --margin-name-title: 2px;
+    --margin-name-subtitle: 2px;
+
+    --fontsize-boxes-title: 18px;
+
+    --fontsize-about-p: 11px;
+    --fontsize-button-about: 13px;
+    --padding-about:10px;
+    --padding-width-button-about: 5px;
+    --padding-height-button-about: 2px;
+    --margin-top-button-about: 0px;
+
+    --fontsize--mail: 12px;
+    --margin-mail-text: 2px;
+    --margin-top-mail-text: 8px;
+  
+    --width-container-buttons-mail: 110px;
+    --height-container-buttons-mail: 35px;
+    --size-button-mail: 22px;
+    --size-img-button-mail: 20px;
+    --fontsize-button-mail: 11px;
+    --width-button-mail-onhover: 60px;
+
+    --padding-project-info: 10px;
+    --fontsize-project-info-title: 17px;
+    --fontsize-project-info-p: 11px;
+    --margin-top-bot-project-tools: 5px;
+    --size-project-tools-img: 18px;
+
+    --width-button-play: 100px;
+    --width-button-play-onhover: 120px;
+    --height-button-play: 23px;
+    --borderwidth-button-play-onhover: 4px;
+    --fontsize-button-play: 12px;
+  }
+
+  .about p{
+    margin-top: 2px;
+    margin-bottom: 15px;
+  }
+
+  .button-about p{
+    margin: 0px;
+  }
+
+  .button-about:hover img{
+    width: 15px;
+    margin-left: 5px;
+  }
+
+  .button-play:hover img{
+    width: 17px;
+    margin-left: 5px;
   }
 }
 
