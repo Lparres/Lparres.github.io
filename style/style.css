@@ -165,6 +165,7 @@ h5 {
     "art      art       mail      mail      skills    skills    skills    skills"
     "game     game      game      game      game      game      game      game"
     "game     game      game      game      game      game      game      game"
+    "empty    empty     empty     empty     empty     empty     empty     empty"
   ;
 }
 
@@ -928,6 +929,20 @@ h5 {
 /*#endregion*/
 
 
+.empty1{
+  grid-area: empty1;
+  background-color: #0B0A10;
+  display: none;
+  visibility: hidden;
+}
+.empty2{
+  grid-area: empty2;
+  background-color: #0B0A10;
+  display: none;
+  visibility: hidden;
+}
+
+
 /*#endregion*/
 
 
@@ -1028,20 +1043,47 @@ h5 {
 @media (max-width: 450px) {
   .grid-container {
     grid-template-areas:
-    "name       name        photo     photo"
-    "name       name        photo     photo"
-    "about      about       about     es"
-    "about      about       about     en"
-    "projects   projects    art       art"
-    "projects   projects    art       art"
-    "github     mail        mail     itchio"
-    "skills     skills      skills    skills"
+    "empty1     empty1      empty1    es        en        empty2    empty2    empty2"
+    "name       name        name      name      photo     photo     photo     photo"
+    "name       name        name      name      photo     photo     photo     photo"
+    "name       name        name      name      photo     photo     photo     photo"
+    "name       name        name      name      photo     photo     photo     photo"
+    "about      about       about     about     about     about     about     about"
+    "about      about       about     about     about     about     about     about"
+    "about      about       about     about     about     about     about     about"
+    "about      about       about     about     about     about     about     about"
+    "projects   projects    projects  projects  art       art       art       art"
+    "projects   projects    projects  projects  art       art       art       art"
+    "projects   projects    projects  projects  art       art       art       art"
+    "projects   projects    projects  projects  art       art       art       art"
+    "github     github      mail      mail      mail      mail      itchio    itchio"
+    "github     github      mail      mail      mail      mail      itchio    itchio"
+    "skills     skills      skills    skills    skills    skills    skills    skills"
+    "skills     skills      skills    skills    skills    skills    skills    skills"
     ;
+  }
+
+
+  .about{
+    aspect-ratio: 2 / 1;
   }
 
   .game{
     display: none;
     visibility: hidden;
+  }
+
+  .empty1{
+    grid-area: empty1;
+    aspect-ratio: 3 / 1;
+    display: flex;
+    visibility: visible;
+  }
+  .empty2{
+    grid-area: empty2;
+    aspect-ratio: 3 / 1;
+    display: flex;
+    visibility: visible;
   }
 }
 
@@ -1477,7 +1519,7 @@ h5 {
     --width-button-play: 100px;
     --width-button-play-onhover: 120px;
     --height-button-play: 25px;
-    --borderwidth-button-play-onhover: 4px;
+    --borderwidth-button-play-onhover: 3px;
     --fontsize-button-play: 13px;
   }
 
@@ -1503,13 +1545,13 @@ h5 {
     --margin-name-title: 2px;
     --margin-name-subtitle: 2px;
 
-    --fontsize-boxes-title: 18px;
+    --fontsize-boxes-title: 22px;
 
-    --fontsize-about-p: 11px;
-    --fontsize-button-about: 13px;
-    --padding-about:10px;
-    --padding-width-button-about: 5px;
-    --padding-height-button-about: 2px;
+    --fontsize-about-p: 12px;
+    --fontsize-button-about: 15px;
+    --padding-about:15px;
+    --padding-width-button-about: 8px;
+    --padding-height-button-about: 5px;
     --margin-top-button-about: 0px;
 
     --fontsize--mail: 12px;
@@ -1532,7 +1574,7 @@ h5 {
     --width-button-play: 100px;
     --width-button-play-onhover: 120px;
     --height-button-play: 23px;
-    --borderwidth-button-play-onhover: 4px;
+    --borderwidth-button-play-onhover: 3px;
     --fontsize-button-play: 12px;
   }
 
@@ -1546,8 +1588,8 @@ h5 {
   }
 
   .button-about:hover img{
-    width: 15px;
-    margin-left: 5px;
+    width: 20px;
+    margin-left: 7px;
   }
 
   .button-play:hover img{
@@ -1556,49 +1598,110 @@ h5 {
   }
 }
 
-@media (max-width: 415px){
+@media (max-width: 420px){
   :root{
-    --fontsize-name-title: 100px;
+    --fontsize-name-title: 44px;
     --fontsize-name-subtitle: 13px;
     --name-subtitle-width: 100px;
     --margin-name-title: 2px;
     --margin-name-subtitle: 2px;
 
-    --fontsize-boxes-title: 18px;
+    --fontsize-boxes-title: 20px;
 
     --fontsize-about-p: 11px;
-    --fontsize-button-about: 13px;
-    --padding-about:10px;
-    --padding-width-button-about: 5px;
-    --padding-height-button-about: 2px;
-    --margin-top-button-about: 0px;
+    --fontsize-button-about: 14px;
+    --padding-about:15px;
+    --padding-width-button-about: 8px;
+    --padding-height-button-about: 5px;
+    --margin-top-button-about: -5px;
 
-    --fontsize--mail: 12px;
+    --fontsize--mail: 11px;
     --margin-mail-text: 2px;
     --margin-top-mail-text: 8px;
   
-    --width-container-buttons-mail: 110px;
-    --height-container-buttons-mail: 35px;
-    --size-button-mail: 22px;
-    --size-img-button-mail: 20px;
+    --width-container-buttons-mail: 100px;
+    --height-container-buttons-mail: 30px;
+    --size-button-mail: 18px;
+    --size-img-button-mail: 18px;
     --fontsize-button-mail: 11px;
     --width-button-mail-onhover: 60px;
 
     --padding-project-info: 10px;
     --fontsize-project-info-title: 17px;
-    --fontsize-project-info-p: 11px;
+    --fontsize-project-info-p: 10px;
     --margin-top-bot-project-tools: 5px;
     --size-project-tools-img: 18px;
 
     --width-button-play: 100px;
     --width-button-play-onhover: 120px;
     --height-button-play: 23px;
-    --borderwidth-button-play-onhover: 4px;
+    --borderwidth-button-play-onhover: 3px;
     --fontsize-button-play: 12px;
   }
 
   .about p{
-    margin-top: 2px;
+    margin-top: 4px;
+    margin-bottom: 15px;
+  }
+
+  .button-about p{
+    margin: 0px;
+  }
+
+  .button-about:hover img{
+    width: 18px;
+    margin-left: 6px;
+  }
+
+  .button-play:hover img{
+    width: 17px;
+    margin-left: 5px;
+  }
+}
+
+@media (max-width: 390px){
+  :root{
+    --fontsize-name-title: 35px;
+    --fontsize-name-subtitle: 12px;
+    --name-subtitle-width: 95px;
+    --margin-name-title: 0px;
+    --margin-name-subtitle: 0px;
+
+    --fontsize-boxes-title: 18px;
+
+    --fontsize-about-p: 10px;
+    --fontsize-button-about: 12px;
+    --padding-about:10px;
+    --padding-width-button-about: 6px;
+    --padding-height-button-about: 4px;
+    --margin-top-button-about: -5px;
+
+    --fontsize--mail: 10px;
+    --margin-mail-text: 0px;
+    --margin-top-mail-text: 8px;
+  
+    --width-container-buttons-mail: 90px;
+    --height-container-buttons-mail: 30px;
+    --size-button-mail: 15px;
+    --size-img-button-mail: 16px;
+    --fontsize-button-mail: 10px;
+    --width-button-mail-onhover: 50px;
+
+    --padding-project-info: 8px;
+    --fontsize-project-info-title: 15px;
+    --fontsize-project-info-p: 9px;
+    --margin-top-bot-project-tools: 4px;
+    --size-project-tools-img: 16px;
+
+    --width-button-play: 80px;
+    --width-button-play-onhover: 100px;
+    --height-button-play: 20px;
+    --borderwidth-button-play-onhover: 2px;
+    --fontsize-button-play: 11px;
+  }
+
+  .about p{
+    margin-top: 4px;
     margin-bottom: 15px;
   }
 
@@ -1612,10 +1715,74 @@ h5 {
   }
 
   .button-play:hover img{
-    width: 17px;
-    margin-left: 5px;
+    width: 13px;
+    margin-left: 2px;
   }
 }
+
+@media (max-width: 350px){
+  :root{
+    --fontsize-name-title: 30px;
+    --fontsize-name-subtitle: 10px;
+    --name-subtitle-width: 80px;
+    --margin-name-title: 0px;
+    --margin-name-subtitle: 0px;
+
+    --fontsize-boxes-title: 16px;
+
+    --fontsize-about-p: 9px;
+    --fontsize-button-about: 11px;
+    --padding-about:8px;
+    --padding-width-button-about: 5px;
+    --padding-height-button-about: 2px;
+    --margin-top-button-about: -5px;
+
+    --fontsize--mail: 9px;
+    --margin-mail-text: 0px;
+    --margin-top-mail-text: 8px;
+  
+    --width-container-buttons-mail: 80px;
+    --height-container-buttons-mail: 30px;
+    --size-button-mail: 14px;
+    --size-img-button-mail: 14px;
+    --fontsize-button-mail: 9px;
+    --width-button-mail-onhover: 45px;
+
+    --padding-project-info: 8px;
+    --fontsize-project-info-title: 13px;
+    --fontsize-project-info-p: 8px;
+    --margin-top-bot-project-tools: 2px;
+    --size-project-tools-img: 15px;
+
+    --width-button-play: 75px;
+    --width-button-play-onhover: 95px;
+    --height-button-play: 18px;
+    --borderwidth-button-play-onhover: 2px;
+    --fontsize-button-play: 10px;
+  }
+
+  .about p{
+    margin-top: 4px;
+    margin-bottom: 15px;
+  }
+
+  .button-about p{
+    margin: 0px;
+  }
+
+  .button-about:hover img{
+    width: 12px;
+    margin-left: 4px;
+  }
+
+  .button-play:hover img{
+    width: 13px;
+    margin-left: 2px;
+  }
+}
+
+/* MAX 325px */
+
 
 /*#endregion*/
 

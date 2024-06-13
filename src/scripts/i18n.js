@@ -15,7 +15,7 @@ function setLanguagePreference(lang) {
 
 // Function to fetch language data
 async function fetchLanguageData(lang) {
-    if(lang === "es-ES") lang = "es";
+    if(lang === "es" || lang === "es-ES") lang = "es";
     else lang = "en";
     const response = await fetch(`i18n/${lang}.json`);
     return response.json();
