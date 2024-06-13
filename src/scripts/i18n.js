@@ -15,6 +15,8 @@ function setLanguagePreference(lang) {
 
 // Function to fetch language data
 async function fetchLanguageData(lang) {
+    if(lang === "es-ES") lang = "es";
+    else lang = "en";
     const response = await fetch(`i18n/${lang}.json`);
     return response.json();
 }
@@ -30,7 +32,7 @@ async function changeLanguage(lang) {
 
 // Call updateContent() on page load
 window.addEventListener('DOMContentLoaded', async () => {
-    const userPreferredLanguage = localStorage.getItem('language') || 'en';
+    const userPreferredLanguage = localStorage.getItem('language') || Navigator.language;
     const langData = await fetchLanguageData(userPreferredLanguage);
     updateContent(langData);
 });
