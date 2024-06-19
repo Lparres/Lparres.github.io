@@ -77,7 +77,7 @@ p {
   font-size: var(--fontsize-about-p);
   font-family: "Nunito", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   color: var(--clr-light-text);
   line-height: 1.5;
@@ -122,7 +122,7 @@ h4 {
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: italic;
-  color: var(--clr-light-text);
+  color: var(--clr-title);
 
   margin: 15px;
 }
@@ -160,8 +160,8 @@ h5 {
 
     "about    about     about     about     photo     photo     es        en"
     "about    about     about     about     photo     photo     projects  projects"
-    "github   github    name      name      name      name      projects  projects"
-    "art      art       name      name      name      name      itchio    itchio"
+    "itchio   itchio    name      name      name      name      projects  projects"
+    "art      art       name      name      name      name      github    github"
     "art      art       mail      mail      skills    skills    skills    skills"
     "game     game      game      game      game      game      game      game"
     "game     game      game      game      game      game      game      game"
@@ -250,7 +250,6 @@ h5 {
 /*#region Buttons About*/
 
 .container-buttons-about{
-  align-self: flex-end;
   display: flex;
 
 }
@@ -258,7 +257,8 @@ h5 {
 .button-about{
   display: flex;
   align-items: center;
-  margin-left: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
   margin-top: var(--margin-top-button-about);
   padding: var(--padding-height-button-about) var(--padding-width-button-about) var(--padding-height-button-about) var(--padding-width-button-about);
   border-radius: 0.4rem;
@@ -615,9 +615,13 @@ h5 {
   aspect-ratio: 2 / 1;
   padding: var(--padding-about);
   text-align: left;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
+}
+
+.about h2{
+  align-self: center;
 }
 
 /*#endregion*/
