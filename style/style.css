@@ -504,7 +504,6 @@ h5 {
 .button-play:hover{
   border-width: var(--borderwidth-button-play-onhover);
   width: var(--width-button-play-onhover);
-  background: var(--clr-light-text);
   animation: anim-play 2s linear infinite;
 }
 
@@ -1120,6 +1119,9 @@ h5 {
     aspect-ratio: 3 / 2 ;
   }
 
+  .name{
+    aspect-ratio: 1 / 1;
+  }
   .projects{
     aspect-ratio: 1 / 1;
   }
@@ -1154,8 +1156,9 @@ h5 {
     "skills     skills      skills    skills    skills    skills    skills    skills"
     "skills     skills      skills    skills    skills    skills    skills    skills"
     ;
-  }
 
+    grid-gap: 0.5rem;
+  }
 
   .about{
     aspect-ratio: 2 / 1;
@@ -1177,6 +1180,35 @@ h5 {
     aspect-ratio: 3 / 1;
     display: flex;
     visibility: visible;
+  }
+
+  .button-mail:hover{
+    width: var(--size-button-mail);
+  }
+  
+  .button-mail:hover img{
+    width: var(--size-img-button-mail);
+  }
+  
+  .button-mail:hover a{
+    cursor: pointer;
+    width: var(--size-img-button-mail);
+  }
+  
+  .button-mail:hover p{
+    width: 0;
+  }
+
+
+  .button-play:hover{
+    border-width: 0px;
+    width: var(--width-button-play);
+    height: var(--height-button-play);
+  }
+  
+  .button-play:hover img{
+    width: 0px;
+    margin-left: 0px;
   }
 }
 
@@ -1680,15 +1712,16 @@ h5 {
     margin: 0px;
   }
 
+  .button-about img{
+    width: 20px;
+    margin-left: 7px;
+  }
+
   .button-about:hover img{
     width: 20px;
     margin-left: 7px;
   }
 
-  .button-play:hover img{
-    width: 17px;
-    margin-left: 5px;
-  }
 }
 
 @media (max-width: 420px){
@@ -1741,15 +1774,16 @@ h5 {
     margin: 0px;
   }
 
+  .button-about img{
+    width: 18px;
+    margin-left: 6px;
+  }
+
   .button-about:hover img{
     width: 18px;
     margin-left: 6px;
   }
 
-  .button-play:hover img{
-    width: 17px;
-    margin-left: 5px;
-  }
 }
 
 @media (max-width: 390px){
@@ -1802,15 +1836,15 @@ h5 {
     margin: 0px;
   }
 
+  .button-about img{
+    width: 15px;
+    margin-left: 5px;
+  }
   .button-about:hover img{
     width: 15px;
     margin-left: 5px;
   }
 
-  .button-play:hover img{
-    width: 13px;
-    margin-left: 2px;
-  }
 }
 
 @media (max-width: 350px){
@@ -1863,15 +1897,15 @@ h5 {
     margin: 0px;
   }
 
-  .button-about:hover img{
-    width: 12px;
+  .button-about img{
+    width: 13px;
     margin-left: 4px;
   }
-
-  .button-play:hover img{
+  .button-about:hover img{
     width: 13px;
-    margin-left: 2px;
+    margin-left: 4px;
   }
+  
 }
 
 /* MAX 325px */
