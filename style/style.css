@@ -631,7 +631,7 @@ h5 {
 .photo {
   grid-area: photo;
   
-  background-image: url("../src/img/foto_perfil.webp");
+  background-image: url("../src/img/profilePicture.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -645,7 +645,7 @@ h5 {
 .es {
   grid-area: es;
   aspect-ratio: 1 / 1;
-  background-image: url("../src/img/flag_spain.png");
+  background-image: url("../src/img/button_spain.png");
   background-position: center;
   background-size: 100%;
   opacity: 70%;
@@ -674,7 +674,7 @@ h5 {
 .en {
   grid-area: en;
   aspect-ratio: 1 / 1;
-  background-image: url("../src/img/flag_uk.svg");
+  background-image: url("../src/img/button_uk.svg");
   background-position: center;
   background-size: 100%;
   opacity: 70%;
@@ -703,7 +703,7 @@ h5 {
 .projects {
   grid-area: projects;
 
-  background-image: url("../src/img/Imagen_Games.jpg");
+  background-image: url("../src/img/button_games.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -779,7 +779,7 @@ h5 {
 .art {
   grid-area: art;
 
-  background-image: url("../src/img/Imagen_Art.jpg");
+  background-image: url("../src/img/button_art.jpg");
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
